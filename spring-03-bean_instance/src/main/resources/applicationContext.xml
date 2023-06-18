@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Method 1: Instantiate the bean using a constructor-->
+    <!--<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+
+
+    <!--Method 2: Instantiate the bean using a static factory-->
+    <!--<bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>-->
+
+    <!--Method 3: Instantiate the bean using an instance factory-->
+    <!--<bean id="userFactory" class="com.itheima.factory.UserDaoFactory"/>
+    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>-->
+
+
+    <!--Method 4: Instantiate the bean using FactoryBean-->
+   <bean id="userDao" class="com.itheima.factory.UserDaoFactoryBean"/>
+
+</beans>
